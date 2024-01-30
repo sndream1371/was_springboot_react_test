@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <springProfile name="dev">
+        <!-- 개발 환경 설정 -->
+        <include resource="classpath:log4j2-dev.xml"/>
+    </springProfile>
+    <springProfile name="prod">
+        <!-- 프로덕션 환경 설정 -->
+        <include resource="classpath:log4j2-prod.xml"/>
+    </springProfile>
+</Configuration>

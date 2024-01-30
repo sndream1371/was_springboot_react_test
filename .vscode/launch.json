@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-WasApplication<was>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.wayside.was.WasApplication",
+      "projectName": "was",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

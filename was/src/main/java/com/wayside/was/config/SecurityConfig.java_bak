@@ -1,0 +1,25 @@
+package com.wayside.was.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+@EnableWebSecurity
+public class SecurityConfig {
+
+  @Bean
+  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    http
+        .csrf().disable() // CSRF 보호 비활성화
+        .authorizeRequests(authorize -> authorize
+            // /api/** 경로는 인증 없이 접근 허용
+            .requestMatchers("/api/**").permitAll()
+            // 그 외 요청은 인증 필요
+            .anyRequest().authenticated())
+        .formLogin().disable() // 폼 로그인 비활성화
+        .httpBasic().disable(); // 기본 HTTP 인증 비활성화
+
+    return http.build();
+  }
+}
