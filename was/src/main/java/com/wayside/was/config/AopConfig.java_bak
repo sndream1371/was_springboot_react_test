@@ -1,0 +1,10 @@
+package com.wayside.was.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@EnableAspectJAutoProxy
+public class AopConfig {
+  // 여기에 필요한 추가적인 빈 설정이나 구성을 추가할 수 있습니다.
+}

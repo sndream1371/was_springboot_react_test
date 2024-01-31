@@ -33,4 +33,11 @@ public class ApiResponse<T> {
   public String getMessage() {
     return message;
   }
+
+  // AOP 응답 통신 로그 사용
+  @Override
+  public String toString() {
+    return "ApiResponse [success=" + success + ", data=" + data + ", message=" + message + "]";
+  }
+
 }
